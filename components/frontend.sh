@@ -35,9 +35,19 @@ DOWNLOAD_COMPONENT
 
 cd frontend
 
-Head "Installing NPM under the frontend path"
-npm install npm@latest --save-dev  --unsafe-perm node-sass &>>$LOG
+Head "Installing npm"
+npm install &>>$LOG
 Stat $?
+
+Head "run and build npm"
+npm install node-sass &>>$LOG
+npm run build &>>$LOG
+sudo npm install --save-dev  --unsafe-perm node-sass &>>$LOG
+Stat $?
+
+#Head "Installing NPM under the frontend path"
+#npm install npm@latest --save-dev  --unsafe-perm node-sass &>>$LOG
+#Stat $?
 
 Head "------------------------------"
 sed -i '32 s/127.0.0.1/login.$DOMAIN/g' /var/www/html/app/frontend/config/index.js
