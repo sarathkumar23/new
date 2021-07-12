@@ -38,8 +38,8 @@ Head "Changing to frontend directory"
 cd frontend
 Stat $?
 
-#Head "Installing npm"
-#npm install &>>$LOG
+Head "Installing npm"
+npm install &>>$LOG
 
 
 Head "run and build npm"
