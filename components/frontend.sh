@@ -40,7 +40,7 @@ Stat $?
 
 Head "Installing npm"
 npm install &>>$LOG
-Stat $?
+
 
 Head "run and build npm"
 npm install node-sass &>>$LOG
