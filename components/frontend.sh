@@ -34,7 +34,7 @@ Stat $?
 
 DOWNLOAD_COMPONENT
 
-Head "Running cd frontend"
+Head "Changing to frontend directory"
 cd frontend
 Stat $?
 
